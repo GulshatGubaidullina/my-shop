@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+/* semantic color variables for this project */
+:root {
+  --color-white-main: #ffffff;
+  --color-black-main: #000000;
+  --color-white-main-hover: #f2f2f2;
+  --color-black-main-hover: #5e5e5e;
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
