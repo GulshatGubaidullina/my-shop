@@ -16,8 +16,8 @@
 
 <script setup>
 import { computed } from "vue";
-import IconHeart from "@/components/icons/IconHeart.vue";
-import MyShopButton from "@/components/UI/MyShopButton.vue";
+import IconHeart from "../components/icons/IconHeart.vue";
+import MyShopButton from "../components/UI/MyShopButton.vue";
 
 const props = defineProps({
   product: { type: Object, required: true },

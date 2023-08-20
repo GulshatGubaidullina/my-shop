@@ -22,11 +22,11 @@
 
 <script setup>
 import { ref } from "vue";
-import IconNavigate from "@/components/icons/IconNavigate.vue";
+import IconNavigate from "../components/icons/IconNavigate.vue";
 import InfoPanelPopUpCity from "./InfoPanelPopUpCity.vue";
-import IconCar from "@/components/icons/IconCar.vue";
-import IconCard from "@/components/icons/IconCard.vue";
-import IconTime from "@/components/icons/IconTime.vue";
+import IconCar from "../components/icons/IconCar.vue";
+import IconCard from "../components/icons/IconCard.vue";
+import IconTime from "../components/icons/IconTime.vue";
 
 const isShowPopupCity = ref(false);
 

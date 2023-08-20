@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import MyShopButton from "@/components/UI/MyShopButton.vue";
+import MyShopButton from "../components/UI/MyShopButton.vue";
 
 const props = defineProps({
   price: { type: Number, required: true },

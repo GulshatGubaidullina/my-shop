@@ -15,9 +15,9 @@
 </template>
 
 <script setup>
-import SideMenu from "@/components/SideMenu.vue";
-import ProductsCards from "@/components/ProductsCards.vue";
-import { useProductsStore } from "@/store";
+import SideMenu from "../components/SideMenu.vue";
+import ProductsCards from "../components/ProductsCards.vue";
+import { useProductsStore } from "../store";
 import { onMounted } from "vue";
 
 const productsStore = useProductsStore();

@@ -11,8 +11,8 @@
 </template>
 
 <script setup>
-import ProductsCards from "@/components/ProductsCards.vue";
-import { useProductsStore } from "@/store";
+import ProductsCards from "../components/ProductsCards.vue";
+import { useProductsStore } from "../store";
 
 const productsStore = useProductsStore();
 

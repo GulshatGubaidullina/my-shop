@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import ProductCard from "@/components/ProductCard.vue";
+import ProductCard from "../components/ProductCard.vue";
 
 const props = defineProps({
   products: { type: Array, required: true },

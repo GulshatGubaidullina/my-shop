@@ -32,8 +32,8 @@
 </template>
 
 <script setup>
-import IconHeart from "@/components/icons/IconHeart.vue";
-import IconDelete from "@/components/icons/IconDelete.vue";
+import IconHeart from "../components/icons/IconHeart.vue";
+import IconDelete from "../components/icons/IconDelete.vue";
 import { computed } from "vue";
 
 const props = defineProps({

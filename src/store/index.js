@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
-import { adapter } from "@/utils/adapter";
-import { addItemLS, getItemFromLS } from "@/utils/localStorage";
+import { adapter } from "../utils/adapter";
+import { addItemLS, getItemFromLS } from "../utils/localStorage";
 
 const url = "https://fakestoreapi.com";
 

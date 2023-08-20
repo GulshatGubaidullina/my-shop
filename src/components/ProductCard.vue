@@ -20,7 +20,7 @@
 
 <script setup>
 import { computed } from "vue";
-import IconHeart from "@/components/icons/IconHeart.vue";
+import IconHeart from "../components/icons/IconHeart.vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();

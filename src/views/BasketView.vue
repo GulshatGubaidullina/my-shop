@@ -21,10 +21,10 @@
 </template>
 
 <script setup>
-import BasketCard from "@/components/BasketCard.vue";
-import BasketMenu from "@/components/BasketMenu.vue";
+import BasketCard from "../components/BasketCard.vue";
+import BasketMenu from "../components/BasketMenu.vue";
 
-import { useProductsStore } from "@/store";
+import { useProductsStore } from "../store";
 import { useRouter } from "vue-router";
 
 const router = useRouter();

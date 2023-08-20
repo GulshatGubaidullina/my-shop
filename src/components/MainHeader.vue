@@ -19,10 +19,10 @@
 </template>
 
 <script setup>
-import IconHeart from "@/components/icons/IconHeart.vue";
-import IconBag from "@/components/icons/IconBag.vue";
+import IconHeart from "../components/icons/IconHeart.vue";
+import IconBag from "../components/icons/IconBag.vue";
 
-import { useProductsStore } from "@/store";
+import { useProductsStore } from "../store";
 
 const productsStore = useProductsStore();
 </script>

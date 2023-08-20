@@ -15,10 +15,10 @@
 </template>
 
 <script setup>
-import ProductInfo from "@/components/ProductInfo.vue";
-import ProductMenu from "@/components/ProductMenu.vue";
+import ProductInfo from "../components/ProductInfo.vue";
+import ProductMenu from "../components/ProductMenu.vue";
 
-import { useProductsStore } from "@/store";
+import { useProductsStore } from "../store";
 import { onMounted } from "vue";
 import { useRoute } from "vue-router";
 
