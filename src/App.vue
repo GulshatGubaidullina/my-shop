@@ -10,7 +10,7 @@ import { RouterView } from "vue-router";
 import InfoPanel from "./components/InfoPanel.vue";
 import MainHeader from "./components/MainHeader.vue";
 
-import { useProductsStore } from "@/store";
+import { useProductsStore } from "./store";
 import { onMounted } from "vue";
 
 const productsStore = useProductsStore();
