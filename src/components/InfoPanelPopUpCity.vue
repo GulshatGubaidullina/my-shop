@@ -8,7 +8,12 @@
         </button>
       </div>
       <div class="modal__cities">
-        <button v-for="city in props.cities" :key="city" class="modal__city">
+        <button
+          v-for="city in props.cities"
+          :key="city"
+          class="modal__city"
+          @click="handleClickCity(city)"
+        >
           {{ city }}
         </button>
       </div>
@@ -19,7 +24,7 @@
 <script setup>
 import IconClose from "./icons/IconClose.vue";
 
-const emit = defineEmits(["update:show"]);
+const emit = defineEmits(["update:show", "change-city"]);
 
 const props = defineProps({
   show: { type: Boolean, required: false, defaul: false },
@@ -28,6 +33,10 @@ const props = defineProps({
 
 const hideDialog = () => {
   emit("update:show", false);
+};
+
+const handleClickCity = (city) => {
+  emit("change-city", city);
 };
 </script>
 

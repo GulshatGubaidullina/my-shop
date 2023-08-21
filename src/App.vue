@@ -19,6 +19,7 @@ onMounted(() => {
   productsStore.getProducts();
   productsStore.getBasket();
   productsStore.getCategoriesFromServer();
+  productsStore.getSelectedCity();
 });
 </script>
 

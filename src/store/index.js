@@ -9,6 +9,7 @@ const Keys = {
   myShopCategories: "my-shop-categories",
   myShopCurrentProduct: "my-shop-current-product",
   myShopBasket: "my-shop-basket",
+  myShopCity: "my-shop-city",
 };
 
 export const useProductsStore = defineStore("productsStore", {
@@ -20,6 +21,7 @@ export const useProductsStore = defineStore("productsStore", {
     selectedCategory: "All",
     selectedFilterOption: "",
     sortOptions: ["По возрастанию цены", "По убыванию цены"],
+    selectedCity: "",
     isError: false,
   }),
   getters: {
@@ -135,6 +137,16 @@ export const useProductsStore = defineStore("productsStore", {
     },
     changeSelectedCategory(category) {
       this.selectedCategory = category;
+    },
+    changeSelectedCity(city) {
+      this.selectedCity = city;
+      this.setDataLocalStorage(Keys.myShopCity, this.selectedCity);
+    },
+    getSelectedCity() {
+      const city = getItemFromLS(Keys.myShopCity);
+      if (city) {
+        this.selectedCity = city;
+      }
     },
   },
 });

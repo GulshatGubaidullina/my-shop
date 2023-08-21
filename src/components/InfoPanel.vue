@@ -2,7 +2,8 @@
   <div class="info-panel">
     <div class="wrapper info-panel__wrapper">
       <button class="info-panel__city" @click="isShowPopupCity = true">
-        <IconNavigate class="info-panel__icon icon" />Город
+        <IconNavigate class="info-panel__icon icon" />
+        {{ productsStore.selectedCity ? productsStore.selectedCity : "Город" }}
       </button>
       <div class="info-panel__info">
         <div
@@ -16,7 +17,11 @@
         </div>
       </div>
     </div>
-    <InfoPanelPopUpCity :cities="cities" v-model:show="isShowPopupCity" />
+    <InfoPanelPopUpCity
+      :cities="cities"
+      v-model:show="isShowPopupCity"
+      @change-city="changeSelectedCity"
+    />
   </div>
 </template>
 
@@ -27,6 +32,10 @@ import InfoPanelPopUpCity from "./InfoPanelPopUpCity.vue";
 import IconCar from "../components/icons/IconCar.vue";
 import IconCard from "../components/icons/IconCard.vue";
 import IconTime from "../components/icons/IconTime.vue";
+
+import { useProductsStore } from "../store";
+
+const productsStore = useProductsStore();
 
 const isShowPopupCity = ref(false);
 
@@ -67,6 +76,11 @@ const getIconName = (iconName) => {
     IconTime: IconTime,
   };
   return icons[iconName];
+};
+
+const changeSelectedCity = (city) => {
+  isShowPopupCity.value = false;
+  productsStore.changeSelectedCity(city);
 };
 </script>
 
@@ -145,4 +159,10 @@ const getIconName = (iconName) => {
 .info-panel__card:hover .card__popup {
   display: inline-block;
 }
+
+/* @media (max-width: 992px) {
+  .wrapper {
+    max-width: 90%;
+  }
+} */
 </style>
