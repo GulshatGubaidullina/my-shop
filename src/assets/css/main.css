@@ -27,6 +27,15 @@ body {
   height: 24px;
 }
 
+.notification {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  font-size: 32px;
+  font-weight: 700;
+}
+
 
 @media (max-width: 1300px){
   .wrapper{

@@ -1,5 +1,5 @@
 <template>
-  <div class="cards" v-if="props.products.length">
+  <div class="cards">
     <ProductCard
       v-for="product in props.products"
       :key="product.id"
@@ -7,7 +7,6 @@
       @change-product-favorite="changeProductFavorite"
     />
   </div>
-  <p v-else class="notification">В избранном ничего нет</p>
 </template>
 
 <script setup>
@@ -32,14 +31,5 @@ const changeProductFavorite = (id) => {
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 10px;
-}
-
-.notification {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, 50%);
-  font-size: 32px;
-  font-weight: 700;
 }
 </style>

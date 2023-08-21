@@ -6,7 +6,7 @@
         :selectedCategory="productsStore.selectedCategory"
         @change-selected-category="changeSelectedCategory"
       />
-      <div class="main__inner">
+      <div class="main__inner" v-if="productsStore.getSortedProducts.length">
         <MyShopSelect
           class="main__select"
           v-model="productsStore.selectedFilterOption"
@@ -17,6 +17,7 @@
           @change-product-favorite="changeProductFavorite"
         />
       </div>
+      <p v-else class="notification">Товаров нет</p>
     </div>
   </main>
 </template>

@@ -3,9 +3,11 @@
     <div class="wrapper favorites__wrapper">
       <h1 class="favorites__title">Избранное</h1>
       <ProductsCards
+        v-if="productsStore.getFavoritesProducts.length"
         :products="productsStore.getFavoritesProducts"
         @change-product-favorite="changeProductFavorite"
       />
+      <p v-else class="notification">В избранном ничего нет</p>
     </div>
   </div>
 </template>
