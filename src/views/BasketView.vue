@@ -13,7 +13,10 @@
             @click="handleClickBasketCard(product.id)"
           />
         </div>
-        <BasketMenu :price="productsStore.getBasketTotalPrice" />
+        <BasketMenu
+          class="basket__menu"
+          :price="productsStore.getBasketTotalPrice"
+        />
       </div>
       <p v-else class="notification">Корзина пуста</p>
     </div>
@@ -71,5 +74,19 @@ const handleClickBasketCard = (id) => {
 
 .basket__cards {
   width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 992px) {
+  .basket__inner {
+    flex-direction: column;
+  }
+  .basket__cards {
+    width: 100%;
+  }
+  .basket__menu {
+    align-self: flex-end;
+  }
 }
 </style>

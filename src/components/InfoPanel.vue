@@ -160,9 +160,9 @@ const changeSelectedCity = (city) => {
   display: inline-block;
 }
 
-/* @media (max-width: 992px) {
-  .wrapper {
-    max-width: 90%;
+@media (max-width: 992px) {
+  .info-panel__info {
+    display: none;
   }
-} */
+}
 </style>

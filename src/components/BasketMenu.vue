@@ -37,4 +37,11 @@ const props = defineProps({
 .basket-menu__price {
   font-size: 18px;
 }
+
+@media (max-width: 768px) {
+  .basket-menu {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 </style>

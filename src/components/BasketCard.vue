@@ -146,4 +146,22 @@ const handleClickDelete = () => {
 .basket-card__price {
   font-weight: 700;
 }
+
+@media (max-width: 768px) {
+  .basket-card {
+    width: 100%;
+    min-width: 300px;
+    flex-direction: column;
+  }
+  .basket-card__btns {
+    width: 100%;
+  }
+  .basket-card__img-wrapper {
+    margin: 0 0 10px 0;
+  }
+  .basket-card__info {
+    align-items: center;
+    margin-bottom: 10px;
+  }
+}
 </style>

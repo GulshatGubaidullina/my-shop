@@ -33,3 +33,10 @@ body {
     max-width: 90%;
   }
 }
+
+@media (max-width: 576px){
+  .wrapper{
+    max-width: 100%;
+    padding: 5px 10px;
+  }
+}
