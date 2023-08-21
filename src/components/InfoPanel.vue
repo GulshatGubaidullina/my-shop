@@ -128,7 +128,9 @@ const changeSelectedCity = (city) => {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  max-width: 300px;
   margin-right: 30px;
+  overflow: hidden;
 }
 
 .info-panel__card:last-child {

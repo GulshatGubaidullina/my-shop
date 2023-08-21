@@ -62,13 +62,14 @@ const handleClickDelete = () => {
 <style scoped>
 .basket-card {
   width: 100%;
-  height: 320px;
+  min-height: 320px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
   border-bottom: 0.5px solid rgb(168, 168, 168);
+  overflow: hidden;
 }
 
 .basket-card:hover {

@@ -98,6 +98,7 @@ const handleClickBasket = () => {
 
 .product-menu__basket-btn {
   width: 80%;
+  margin-right: 10px;
 }
 
 .product-menu__like-btn {
@@ -114,6 +115,5 @@ const handleClickBasket = () => {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(-50%, 50%);
 }
 </style>
