@@ -18,6 +18,8 @@ export const useProductsStore = defineStore("productsStore", {
     basket: [],
     categories: [],
     selectedCategory: "All",
+    selectedFilterOption: "",
+    sortOptions: ["По возрастанию цены", "По убыванию цены"],
     isError: false,
   }),
   getters: {
@@ -31,11 +33,26 @@ export const useProductsStore = defineStore("productsStore", {
       return state.basket.length;
     },
     getSortedProducts: (state) => {
-      if (state.selectedCategory === "All") return state.products;
-      else
-        return state.products.filter(
+      if (state.selectedCategory === "All") {
+        if (state.selectedFilterOption === "По возрастанию цены") {
+          return state.products.slice().sort((a, b) => a.price - b.price);
+        }
+        if (state.selectedFilterOption === "По убыванию цены") {
+          return state.products.slice().sort((a, b) => b.price - a.price);
+        }
+        return state.products;
+      } else {
+        const sortedByCategory = state.products.filter(
           (product) => product.category === state.selectedCategory
         );
+        if (state.selectedFilterOption === "По возрастанию цены") {
+          return sortedByCategory.slice().sort((a, b) => a.price - b.price);
+        }
+        if (state.selectedFilterOption === "По убыванию цены") {
+          return sortedByCategory.slice().sort((a, b) => b.price - a.price);
+        }
+        return sortedByCategory;
+      }
     },
   },
   actions: {
