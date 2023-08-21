@@ -35,6 +35,7 @@ const router = useRouter();
 const productsStore = useProductsStore();
 
 const changeProductFavorite = (id) => {
+  
   productsStore.changeProductFavorite(id);
 };
 

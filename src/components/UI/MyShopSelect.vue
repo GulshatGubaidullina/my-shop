@@ -1,6 +1,6 @@
 <template>
   <select class="select" :value="modelValue" @change="changeOption">
-		<option disabled value="">Выберите из списка</option>
+    <option disabled value="">Сортировка по цене</option>
     <option
       class="select__option"
       v-for="option in options"
@@ -27,7 +27,7 @@ const changeOption = (event) => {
 
 <style scoped>
 .select {
-  min-width: 200px;
+  min-width: 100px;
   max-width: 300px;
   padding: 10px 20px;
   border: 1px solid var(--color-black-main);
