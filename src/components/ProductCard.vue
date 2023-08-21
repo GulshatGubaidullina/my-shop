@@ -1,9 +1,11 @@
 <template>
   <div class="card__wrapper" @click="handleClickProductCard">
     <div class="card">
-      <button class="card__like-btn" @click.stop="handleClickFavorite">
-        <IconHeart :color="getIconColor" class="icon like-btn__icon" />
-      </button>
+      <MyShopLikeButton
+        class="card__like-btn"
+        :color="getIconColor"
+        @click.stop="handleClickFavorite"
+      />
       <div
         class="card__img"
         :style="{ 'background-image': 'url(' + props.product.image + ')' }"
@@ -20,8 +22,8 @@
 
 <script setup>
 import { computed } from "vue";
-import IconHeart from "../components/icons/IconHeart.vue";
 import { useRouter } from "vue-router";
+import MyShopLikeButton from "./UI/MyShopLikeButton.vue";
 
 const router = useRouter();
 

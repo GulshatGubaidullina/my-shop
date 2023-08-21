@@ -7,9 +7,10 @@
       <MyShopButton class="product-menu__basket-btn" @click="handleClickBasket">
         {{ isProductInBasket ? "В корзине" : "Добавить в корзину" }}
       </MyShopButton>
-      <button class="product-menu__like-btn" @click.stop="handleClickFavorite">
-        <IconHeart :color="getIconColor" class="icon like-btn__icon" />
-      </button>
+      <MyShopLikeButton
+        :color="getIconColor"
+        @click.stop="handleClickFavorite"
+      />
     </div>
   </div>
 </template>
@@ -18,6 +19,7 @@
 import { computed } from "vue";
 import IconHeart from "../components/icons/IconHeart.vue";
 import MyShopButton from "../components/UI/MyShopButton.vue";
+import MyShopLikeButton from "./UI/MyShopLikeButton.vue";
 
 const props = defineProps({
   product: { type: Object, required: true },
@@ -93,7 +95,7 @@ const handleClickBasket = () => {
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .product-menu__basket-btn {
@@ -102,18 +104,11 @@ const handleClickBasket = () => {
 }
 
 .product-menu__like-btn {
-  position: relative;
-  width: 20%;
-  height: 48px;
+  width: 24px;
+  height: 24px;
 }
 
 .product-menu__like-btn:hover {
   opacity: 0.6;
-}
-
-.like-btn__icon {
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 </style>
